@@ -1,0 +1,25 @@
+title: My Jekyll Blog
+description: A GitHub Pages site powered by Jekyll.
+url: ""
+baseurl: ""
+
+remote_theme: daviddarnes/garth
+logo: /assets/images/logo.png
+favicon: /assets/images/logo.png
+
+plugins:
+  - jekyll-feed
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+
+author: Your Name
+email: your-email@example.com
+github_username: YOUR_USERNAME
+
+navigation:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Blog
+    url: /blog/
