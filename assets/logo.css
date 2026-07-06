@@ -1,3 +1,32 @@
+@font-face {
+  font-family: "Mona Sans";
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url("https://github.blog/wp-content/themes/github-2021/dist/fonts/mona-sans.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Monaspace Neon";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://github.blog/wp-content/themes/github-2021/dist/fonts/MonaspaceNeon-Regular.woff2") format("woff2");
+}
+
+:root {
+  --blog-font-sans: "Mona Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --blog-font-mono: "Monaspace Neon", ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", monospace;
+}
+
+body,
+.typeset,
+.article,
+.header,
+.footer {
+  font-family: var(--blog-font-sans);
+}
+
 .header__inner {
   align-items: center;
   display: flex;
@@ -60,10 +89,257 @@
   max-width: 100%;
 }
 
+.about-hero {
+  background: linear-gradient(135deg, rgba(246, 248, 250, 0.98), rgba(255, 250, 240, 0.92));
+  border: 1px solid rgba(84, 72, 49, 0.14);
+  border-radius: 8px;
+  margin: 0.75rem 0 1.5rem;
+  padding: 1.1rem 1.25rem;
+}
+
+.about-hero h1 {
+  margin-bottom: 0.45rem;
+  padding-top: 0;
+}
+
+.about-hero p {
+  margin-bottom: 0.65rem;
+  padding-top: 0;
+}
+
+.about-hero p:last-child {
+  margin-bottom: 0;
+}
+
+.topic-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0.75rem 0 1.5rem;
+}
+
+.topic-card {
+  background: rgba(246, 248, 250, 0.78);
+  border: 1px solid rgba(87, 96, 106, 0.18);
+  border-radius: 8px;
+  padding: 0.85rem;
+}
+
+.topic-card h3 {
+  font-size: 1rem;
+  margin: 0 0 0.35rem;
+  padding-top: 0;
+}
+
+.topic-card p {
+  font-size: 0.95rem;
+  line-height: 1.42;
+  margin: 0;
+  padding-top: 0;
+  text-align: left;
+}
+
+.typeset h1,
+.typeset h2,
+.typeset h3,
+.typeset h4,
+.typeset h5,
+.typeset h6 {
+  font-family: var(--blog-font-sans);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.typeset h1,
+.typeset .alpha {
+  font-size: 1.75rem;
+  margin-bottom: 0.35rem;
+  padding-top: 0.65rem;
+}
+
+.typeset h2,
+.typeset .beta {
+  font-size: 1.45rem;
+  margin-bottom: 0.25rem;
+  padding-top: 0.8rem;
+}
+
+.typeset h3,
+.typeset .gamma {
+  font-size: 1.25rem;
+  margin-bottom: 0.2rem;
+  padding-top: 0.65rem;
+}
+
+.typeset h4,
+.typeset .delta,
+.typeset h5,
+.typeset .epsilon,
+.typeset h6,
+.typeset .zeta {
+  font-size: 1.1rem;
+  margin-bottom: 0.15rem;
+  padding-top: 0.5rem;
+}
+
+.article.typeset p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.article.typeset li {
+  text-align: left;
+}
+
+.article.typeset table,
+.article.typeset table p,
+.article.typeset table li,
+.article.typeset pre,
+.article.typeset code {
+  text-align: left;
+}
+
+.typeset ul,
+.typeset ol {
+  line-height: 1.45;
+  margin: 0.35rem 0 1rem;
+  padding-left: 1.35rem;
+}
+
+.typeset ul {
+  list-style-position: outside;
+}
+
+.typeset ol {
+  list-style-type: decimal;
+  list-style-position: outside;
+}
+
+.typeset ul li,
+.typeset ol li {
+  line-height: 1.45;
+  margin: 0.15rem 0 0.15rem 0;
+  padding-left: 0.15rem;
+}
+
+.typeset ul li,
+.typeset ol li {
+  margin-left: 0;
+}
+
+.typeset ol li {
+  counter-increment: none;
+  position: static;
+}
+
+.typeset ol li::before {
+  content: none;
+}
+
+.typeset ul li::marker,
+.typeset ol li::marker {
+  color: #6f6a56;
+  font-weight: 700;
+}
+
+.typeset li > ul,
+.typeset li > ol {
+  margin: 0.2rem 0 0.35rem;
+  padding-left: 1.1rem;
+}
+
+.typeset li p {
+  margin-bottom: 0.35rem;
+  padding-top: 0;
+}
+
+.typeset .note-list {
+  background: rgba(246, 248, 250, 0.78);
+  border-left: 3px solid #2f81f7;
+  border-radius: 0 8px 8px 0;
+  margin: 0.6rem 0 1.25rem;
+  padding: 0.65rem 0.85rem 0.65rem 1rem;
+}
+
+.typeset .note-list--rule {
+  border-left-color: #1a7f37;
+}
+
+.typeset .note-list ul,
+.typeset .note-list ol {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.typeset .note-list li {
+  line-height: 1.38;
+  margin: 0.25rem 0;
+  padding-left: 0.1rem;
+}
+
+.typeset .note-list li::marker {
+  color: #57606a;
+}
+
 .typeset pre,
 .typeset table {
   max-width: 100%;
   overflow-x: auto;
+}
+
+.typeset table {
+  background: #fffaf0;
+  border: 1px solid rgba(54, 50, 32, 0.18);
+  border-collapse: separate;
+  border-radius: 8px;
+  border-spacing: 0;
+  color: inherit;
+  font-family: var(--blog-font-sans);
+  font-size: 9.5pt;
+  font-feature-settings: 'kern', 'onum', 'liga';
+  line-height: 1.28;
+  margin: 1rem 0 1.6rem;
+  max-width: 100%;
+  overflow: hidden;
+  padding-top: 0;
+  table-layout: auto !important;
+  width: auto !important;
+}
+
+.typeset table th,
+.typeset table td {
+  border-bottom: 1px solid rgba(54, 50, 32, 0.12);
+  border-right: 1px solid rgba(54, 50, 32, 0.1);
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  overflow-wrap: normal;
+  padding: 0.35rem 0.5rem;
+  vertical-align: top;
+  white-space: normal;
+  word-break: normal;
+}
+
+.typeset table th {
+  background: rgba(54, 50, 32, 0.06);
+  color: #363220;
+  font-weight: 700 !important;
+}
+
+.typeset table tr:last-child td {
+  border-bottom: 0;
+}
+
+.typeset table th:last-child,
+.typeset table td:last-child {
+  border-right: 0;
+}
+
+.typeset code,
+.typeset pre,
+.typeset kbd,
+.typeset samp {
+  font-family: var(--blog-font-mono);
 }
 
 .typeset {
@@ -89,6 +365,16 @@
 
   .header .list--nav {
     gap: 0.2rem 0.75rem;
+  }
+
+  .topic-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .typeset table {
+    display: block;
+    overflow-x: auto;
+    width: 100% !important;
   }
 }
 

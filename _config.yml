@@ -12,6 +12,14 @@ plugins:
   - jekyll-remote-theme
   - jekyll-seo-tag
 
+exclude:
+  - .agents/
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - sdlc-regular-vs-fde.excalidraw
+  - skills-lock.json
+
 author: Your Name
 email: your-email@example.com
 github_username: YOUR_USERNAME
