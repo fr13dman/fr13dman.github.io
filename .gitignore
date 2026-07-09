@@ -4,3 +4,8 @@ _site/
 .jekyll-metadata
 vendor/
 .bundle/
+
+# Local agent/tooling artifacts
+.agents/
+skills-lock.json
+*.excalidraw
